@@ -1,0 +1,15 @@
+@import "hero.css";
+@import "imgP.css";
+@import "p.css";
+@import ".css";
+@import ".css";
+@import ".css";
+@import ".css";
+@import ".css";
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
