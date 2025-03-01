@@ -7,13 +7,8 @@ let e = document.querySelector(".email");
 let p = document.querySelector(".phone");
 let d = document.querySelector(".dob");
 let l = document.querySelector(".location");
-
-
-function populateUser(obj) {
-    // Qui carico l'immagine
-    // Prendi con querySelector l'immagine e cambi l'attributo src
-}
-
+let c = document.querySelector(".country");
+let img = document.querySelector(".picture")
 
 fetch(url).then(
     function (resp) {
@@ -23,11 +18,13 @@ fetch(url).then(
     }
 ).then(
     function (glbPerson) {
-        n.innerHTML = glbPerson.results[0].name.first;
+        img.setAttribute("src", glbPerson.results[0].picture.large);
+        n.innerHTML = glbPerson.results[0].name.first + " " + glbPerson.results[0].name.last;
         e.innerHTML = glbPerson.results[0].email;
-        p.innerHTML = glbPerson.results[0].phone;
-        d.innerHTML = glbPerson.results[0].dob.age;
+        p.innerHTML = "+ " + glbPerson.results[0].phone;
+        d.innerHTML = glbPerson.results[0].dob.age + " years";
         l.innerHTML = glbPerson.results[0].location.street.name + " " + glbPerson.results[0].location.street.number;
+        c.innerHTML = glbPerson.results[0].location.state + ", " + glbPerson.results[0].location.country;
     }
 ).catch(
     function (err) {

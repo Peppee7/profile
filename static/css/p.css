@@ -1,3 +1,45 @@
 .name {
     position: absolute;
+    font-size: 50px;
+    top: 20px;
+    left: 170px;
+}
+
+.dob {
+    position: absolute;
+    font-size: 50px;
+    top: 20px;
+    right: 270px;
+}
+
+.phone {
+    position: absolute;
+    font-size: 35px;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.email {
+    position: absolute;
+    font-size: 35px;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.location {
+    position: absolute;
+    font-size: 35px;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.country {
+    position: absolute;
+    font-size: 35px;
+    top: 550px;
+    left: 50%;
+    transform: translateX(-50%);
 }
